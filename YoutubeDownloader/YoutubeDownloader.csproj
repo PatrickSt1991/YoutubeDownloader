@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="ffmpeg.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('ffmpeg.exe')" />
+    <None Include="ffmpeg.exe" CopyToOutputDirectory="Always" Condition="Exists('ffmpeg.exe')" />
     <None Include="ffmpeg" CopyToOutputDirectory="PreserveNewest" Condition="Exists('ffmpeg')" />
   </ItemGroup>
 

@@ -27,8 +27,8 @@
                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                         Text="{Binding Query}"
                         Theme="{DynamicResource SoloTextBox}"
-                        ToolTip.Tip="Any valid YouTube URL or ID is accepted. Prepend a question mark (?) to perform search by text."
-                        Watermark="URL or search query">
+                        ToolTip.Tip="Vul hier een YouTube URL in."
+                        Watermark="YouTube URL">
                         <TextBox.InnerLeftContent>
                             <materialIcons:MaterialIcon
                                 Width="24"
@@ -44,7 +44,7 @@
                                 Command="{Binding ProcessQueryCommand}"
                                 IsDefault="True"
                                 Theme="{DynamicResource MaterialFlatButton}"
-                                ToolTip.Tip="Process query (Enter)">
+                                ToolTip.Tip="Zoek opdracht (Enter)">
                                 <materialIcons:MaterialIcon
                                     Width="24"
                                     Height="24"
@@ -65,7 +65,7 @@
                     IsVisible="{OnPlatform False,
                                            Windows=True}"
                     Theme="{DynamicResource MaterialFlatButton}"
-                    ToolTip.Tip="Authentication">
+                    ToolTip.Tip="Google Login">
                     <materialIcons:MaterialIcon
                         Width="24"
                         Height="24"
@@ -81,7 +81,7 @@
                     Command="{Binding ShowSettingsCommand}"
                     Foreground="{DynamicResource MaterialDarkForegroundBrush}"
                     Theme="{DynamicResource MaterialFlatButton}"
-                    ToolTip.Tip="Settings">
+                    ToolTip.Tip="Instellingen">
                     <materialIcons:MaterialIcon
                         Width="24"
                         Height="24"
@@ -119,15 +119,13 @@
                     LineSpacing="8"
                     TextAlignment="Center"
                     TextWrapping="Wrap">
-                    <Run Text="Copy-paste a" />
-                    <Run FontWeight="SemiBold" Text="URL" />
-                    <Run Text="or enter a" />
-                    <Run FontWeight="SemiBold" Text="search query" />
-                    <Run Text="to start downloading" />
+                    <Run Text="Kopieer &amp; Plak en" />
+                    <Run FontWeight="Bold" Text="YouTube URL" />
+                    <Run Text="om het downloaden te starten" />
                     <LineBreak />
-                    <Run Text="Press" />
-                    <Run FontWeight="SemiBold" Text="Shift+Enter" />
-                    <Run Text="to add multiple items" />
+                    <Run Text="Klik" />
+                    <Run FontWeight="Bold" Text="Shift+Enter" />
+                    <Run Text="om meerdere toe te voegen." />
                 </TextBlock>
             </StackPanel>
 
@@ -140,12 +138,12 @@
                 VerticalScrollBarVisibility="Auto">
                 <DataGrid.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Command="{Binding RemoveSuccessfulDownloadsCommand}" Header="Remove successful downloads" />
-                        <MenuItem Command="{Binding RemoveInactiveDownloadsCommand}" Header="Remove inactive downloads" />
+                        <MenuItem Command="{Binding RemoveSuccessfulDownloadsCommand}" Header="Verwijder geslaagde downloads" />
+                        <MenuItem Command="{Binding RemoveInactiveDownloadsCommand}" Header="Verwijder inactive downloads" />
                         <Separator />
-                        <MenuItem Command="{Binding RestartFailedDownloadsCommand}" Header="Restart failed downloads" />
+                        <MenuItem Command="{Binding RestartFailedDownloadsCommand}" Header="Herstart mislukte downloads" />
                         <Separator />
-                        <MenuItem Command="{Binding CancelAllDownloadsCommand}" Header="Cancel all downloads" />
+                        <MenuItem Command="{Binding CancelAllDownloadsCommand}" Header="Stop alle downloads" />
                     </ContextMenu>
                 </DataGrid.ContextMenu>
                 <DataGrid.Columns>
@@ -245,7 +243,7 @@
                                                     <Setter Property="ToolTip.Tip">
                                                         <Template>
                                                             <TextBlock>
-                                                                <Run FontWeight="SemiBold" Text="Note: Click to copy this error message" />
+                                                                <Run FontWeight="SemiBold" Text="Note: Klik om de foutmelding te kopieren" />
                                                                 <LineBreak />
                                                                 <LineBreak />
                                                                 <Run Text="{Binding ErrorMessage}" />

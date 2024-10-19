@@ -226,8 +226,8 @@ public partial class DashboardViewModel : ViewModelBase
             {
                 await _dialogManager.ShowDialogAsync(
                     _viewModelManager.CreateMessageBoxViewModel(
-                        "Nothing found",
-                        "Couldn't find any videos based on the query or URL you provided"
+                        "Niks gevonden",
+                        "Kon de video niet vinden op de opgegeven URL"
                     )
                 );
             }

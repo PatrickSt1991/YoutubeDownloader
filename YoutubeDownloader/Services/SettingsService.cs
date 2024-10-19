@@ -35,7 +35,7 @@ public partial class SettingsService()
         set => SetProperty(ref _theme, value);
     }
 
-    private bool _isAutoUpdateEnabled = true;
+    private bool _isAutoUpdateEnabled = false;
     public bool IsAutoUpdateEnabled
     {
         get => _isAutoUpdateEnabled;

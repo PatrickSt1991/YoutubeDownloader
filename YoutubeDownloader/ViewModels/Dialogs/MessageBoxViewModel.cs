@@ -6,10 +6,10 @@ namespace YoutubeDownloader.ViewModels.Dialogs;
 public partial class MessageBoxViewModel : DialogViewModelBase
 {
     [ObservableProperty]
-    private string? _title = "Title";
+    private string? _title = "Titel";
 
     [ObservableProperty]
-    private string? _message = "Message";
+    private string? _message = "Bericht";
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsDefaultButtonVisible))]
